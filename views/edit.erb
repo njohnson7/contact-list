@@ -1,0 +1,27 @@
+<header>
+  <h3><%= @contact[:name] %></h3>
+</header>
+
+<section>
+  <form action='/contacts/<%= @contact[:name] %>/edit' method='post'>
+    <div>
+      <label for='new_name'>Name:</label>
+      <input name='new_name' value='<%= params[:name] || @contact[:name] %>'>
+    </div>
+
+    <div>
+      <label for='email'>Email:</label>
+      <input name='email' value='<%= params[:email] || @contact[:email] %>'>
+    </div>
+
+    <div>
+      <label for='phone'>Phone:</label>
+      <input name='phone' value='<%= params[:phone] || @contact[:phone] %>'>
+    </div>
+
+    <div>
+      <button type='submit'>Save Changes</button>
+      <a href='/contacts'>Cancel</a>
+    </div>
+  </form>
+</section>

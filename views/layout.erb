@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contacts</title>
+  <link rel='stylesheet' href='/stylesheets/contacts.css'>
+</head>
+
+<body>
+  <% if session[:msg] %>
+    <div class='msg'>
+      <%= session.delete(:msg) %>
+    </div>
+  <% end %>
+
+  <%= yield %>
+</body>
+</html>

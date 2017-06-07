@@ -1,0 +1,25 @@
+<header>
+  <h3>
+    <%= @contact[:name] %>
+    <form class='inline left-pad' action='/contacts/<%= @contact[:name] %>/edit' method='get'>
+      <button type='submit'>Edit</button>
+    </form>
+  </h3>
+</header>
+
+<section>
+  <table>
+    <tr>
+      <th>Name</th>
+      <td><%= @contact[:name] %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><%= @contact[:email] %></td>
+    </tr>
+    <tr>
+      <th>Phone Number</th>
+      <td><%= @contact[:phone] %></td>
+    </tr>
+  </table>
+</section>

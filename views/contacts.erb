@@ -1,0 +1,21 @@
+<header>
+  <h3>
+    Contacts
+    <form class='inline left-pad' action='/contacts/new' method='get'>
+      <button type='submit'>New</button>
+    </form>
+  </h3>
+</header>
+
+<section>
+  <ul>
+    <% @contacts.each do |contact| %>
+      <li>
+        <a href='/contacts/<%= contact[:name] %>'><%= contact[:name] %></a>
+        <form class='inline' action='/contacts/<%= contact[:name] %>/delete' method='post'>
+          <button type='submit'>delete</button>
+        </form>
+      </li>
+    <% end %>
+  </ul>
+</section>

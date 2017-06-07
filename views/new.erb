@@ -1,0 +1,27 @@
+<header>
+  <h3>New</h3>
+</header>
+
+<section>
+  <form action='/contacts/new' method='post'>
+    <div>
+      <label for='name'>Name:</label>
+      <input name='name' value='<%= params[:name] %>'>
+    </div>
+
+    <div>
+      <label for='email'>Email:</label>
+      <input name='email' value='<%= params[:email] %>'>
+    </div>
+
+    <div>
+      <label for='phone'>Phone:</label>
+      <input name='phone' value='<%= params[:phone] %>'>
+    </div>
+
+    <div>
+      <button type='submit'>Save Changes</button>
+      <a href='/contacts'>Cancel</a>
+    </div>
+  </form>
+</section>
